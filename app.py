@@ -11,8 +11,6 @@ import pandas as pd
 from pandasai.responses.streamlit_response import StreamlitResponse
 
 
-llm = OpenAI(api_token=os.environ.get("OPENAI_API_KEY"))
-
 st.sidebar.title("PandasAI")
 
 st.sidebar.subheader("Configuration")
@@ -44,6 +42,8 @@ if csv_file:
         if not OpenAI_API_KEY:
             st.error("Please provide an OpenAI API Key")
             st.stop()
+        else:
+            llm = OpenAI(api_token=OpenAI_API_KEY)
 
         if prompt:
             
