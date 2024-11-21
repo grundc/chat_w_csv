@@ -52,7 +52,7 @@ if csv_file:
                 agent = Agent(df, config={"llm": llm, "verbose": True, "response_parser": StreamlitResponse}, memory_size=5)
                 #response = sdf.chat(prompt)
                 response = agent.chat(prompt)
-                if os.path.isfile(response):
+                if os.path.isfile(str(response)):
                     st.image(response)
                 else:
                     st.write(response)
