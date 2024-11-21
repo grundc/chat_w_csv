@@ -11,8 +11,8 @@ import pandas as pd
 from pandasai.responses.streamlit_response import StreamlitResponse
 
 
+# st.title("Chat with your CSV")
 st.sidebar.title("PandasAI")
-
 st.sidebar.subheader("Configuration")
 
 OpenAI_API_KEY = st.sidebar.text_input("OpenAI API Key", type="password")
