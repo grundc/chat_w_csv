@@ -15,6 +15,8 @@ import pandasai as pai
 # Setup Session prompt history
 if "prompt_history" not in st.session_state:
         st.session_state.prompt_history = []
+if "prompt" not in st.session_state:
+        st.session_state.prompt = ''
 # **********************************************
 
 
